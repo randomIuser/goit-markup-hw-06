@@ -533,13 +533,16 @@ img {
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   max-width: 264px;
 }
-.footer-social-heading {
+.footer-element-heading {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--active-btn-text);
   margin-bottom: 16px;
+}
+.footer-social-container {
+  margin-right: 80px;
 }
 .footer-socials-list {
   display: flex;
@@ -567,7 +570,18 @@ img {
 .footer-socials-icon {
   fill: var(--footer-text-color);
 }
-
+.footer-input {
+  margin-right: 24px;
+}
+.subscribe-btn {
+  background-color: var(--link-color);
+  color: var(--active-btn-text);
+  justify-content: center;
+  align-items: center;
+  padding: 8px 24px;
+  gap: 16px;
+  border-radius: 4px;
+}
 /* MODAL Window */
 .backdrop {
   width: 100%;
@@ -628,4 +642,10 @@ img {
 }
 .modal-close-icon {
   transition: fill var(--transition-time);
+}
+
+/* MODAL Form */
+label {
+  display: block;
+  margin-bottom: 8px;
 }
