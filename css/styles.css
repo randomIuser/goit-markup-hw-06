@@ -573,7 +573,7 @@ img {
 .footer-socials-icon {
   fill: var(--footer-text-color);
 }
-.footer-input-label {
+.footer-input-container {
   display: flex;
   gap: 24px;
   position: relative;
@@ -587,6 +587,12 @@ img {
   gap: 16px;
   border-radius: 4px;
   cursor: pointer;
+}
+.subscribe-btn:hover,
+.subscribe-btn:focus {
+  background-color: var(--active-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
 }
 .footer-input {
   color: #ffffff;
@@ -606,9 +612,10 @@ img {
   line-height: 24px;
   letter-spacing: 0.04em;
   color: #ffffff;
+  transition: transform var(--transition-time);
 }
 .footer-input:focus + .footer-input-tag {
-  display: none;
+  transform: translateY(-170%);
 }
 .subscribe-btn {
   display: flex;
@@ -645,7 +652,7 @@ img {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   position: absolute;
-  padding: 24px;
+  padding: 72px 24px 24px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
@@ -689,6 +696,7 @@ label {
 }
 .form-wrapper {
   position: relative;
+  margin-bottom: 8px;
 }
 .modal-heading {
   display: block;
@@ -698,7 +706,6 @@ label {
   text-align: center;
   letter-spacing: 0.02em;
   color: #2e2f42;
-  margin-top: 72px;
   margin-bottom: 22px;
 }
 .modal-label {
@@ -713,7 +720,6 @@ label {
   height: 40px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
-  margin-bottom: 8px;
   position: relative;
   outline-offset: -1px;
   padding: 0;
@@ -740,12 +746,17 @@ label {
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
   resize: none;
+  outline-offset: -1px;
+  padding: 8px 16px;
   margin-bottom: 10px;
+}
+.modal-input-comment:focus {
+  outline: 1px solid var(--link-color);
+  transition: outline var(--transition-time);
 }
 .modal-checkbox-label {
   display: flex;
   gap: 8px;
-  justify-content: center;
   margin-bottom: 24px;
 }
 .modal-input-checkbox {
@@ -755,6 +766,13 @@ label {
   height: 16px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 2px;
+}
+.privacy-link {
+  color: var(--link-color);
+}
+.privacy-link:hover,
+.privacy-link:focus {
+  color: var(--active-color);
 }
 .modal-input-checkbox:checked {
   background-color: var(--active-color);
